@@ -1,8 +1,13 @@
 .card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    padding: 8px;
-    margin: 4px;
-    list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 8px;
+  margin: 4px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.card p {
+  margin: 0;
 }

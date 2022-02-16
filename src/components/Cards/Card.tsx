@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { User } from "../../types/Types";
-import './Card.css';
+import "./Card.css";
 
 const Card = (props: User) => {
-  return <li className="card">{props.name}</li>;
+  const [expand, setExpand] = useState(false);
+
+  const onClick = () => {
+    setExpand(!expand);
+  };
+
+  return (
+    <li className="card" onClick={onClick}>
+      <p>{props.name}</p>
+      {expand && (
+        <div className="card-content">
+          <p>{props.email}</p>
+          <p>{props.phone}</p>
+        </div>
+      )}
+    </li>
+  );
 };
 
 export default Card;
